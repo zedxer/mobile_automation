@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mobile Automation</string>
+    <string-array name="sports_array">
+        <item>Shuttle Badminton</item>
+        <item>fgf</item>
+        <item>FootBall</item>
+        <item>Basket Ball</item>
+        <item>Table Tennis</item>
+        <item>Chess</item>
+        <item>Hockey</item>
+        <item>Table Tennis</item>
+        <item>Chess</item>
+        <item>Hockey</item>
+    </string-array>
+    <string name="ok">OK</string>
+    <string name="daily">Daily</string>
+    <string name="title_activity_createnewlocation">Map</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_location">Map</string>
+</resources>

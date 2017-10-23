@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_automessaging"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/lightblue"
+
+    tools:context="com.example.jawwad.mobiledatabase.Automessaging">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Auto Messaging"
+        android:id="@+id/textView5"
+        android:textSize="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        android:textAlignment="center"/>
+
+
+    <!--android:layout_above="@+id/play_pause"-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:text="OK"
+        android:textSize="15sp"
+        android:id="@+id/condition_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/background_light"
+        android:onClick="GoBack" />
+
+
+
+    <EditText
+        android:layout_width="260dp"
+        android:layout_height="65dp"
+        android:id="@+id/message"
+        android:hint="Enter Your Message Here"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="15dp"
+        android:layout_toStartOf="@+id/condition_back"
+        android:layout_toLeftOf="@+id/condition_back"
+        android:background="#ffffff"      />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:id="@+id/contactlist"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:cacheColorHint="@android:color/black"
+        android:divider="@android:color/black" />
+
+    <Button
+        android:layout_width="130sp"
+        android:layout_height="50sp"
+        android:textSize="17sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Contact"
+        android:id="@+id/textView3"
+        android:onClick="SelectContactClick"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jawwad.mobiledatabase.Location">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Location"
+        android:id="@+id/locationpagetext"
+        android:textSize="35dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/locationback"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/background_light"
+        android:onClick="GoBack"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Latitude:      "
+        android:id="@+id/lat"
+        android:layout_below="@+id/locationpagetext"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/latval"
+        android:layout_toRightOf="@+id/lat"
+        android:layout_below="@+id/locationpagetext"
+        android:paddingTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Longitude:   "
+        android:id="@+id/lang"
+        android:layout_below="@+id/lat"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/langval"
+        android:layout_below="@+id/latval"
+        android:layout_toRightOf="@id/lang"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Radius:         "
+        android:id="@+id/radius"
+        android:layout_below="@+id/lang"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/radval"
+        android:layout_below="@+id/langval"
+        android:layout_toRightOf="@id/radius"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name:          "
+        android:id="@+id/nam"
+        android:layout_below="@+id/radius"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/namval"
+        android:layout_below="@+id/radval"
+        android:layout_toRightOf="@id/nam"
+        android:paddingTop="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/background_light"
+        android:onClick="CreatCLick"
+        android:layout_above="@+id/locationback"
+        android:layout_alignStart="@+id/locationback"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/button2" />
+</RelativeLayout>

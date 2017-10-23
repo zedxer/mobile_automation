@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/max1">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_phonesetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jawwad.mobiledatabase.Phonesetting">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/volume"
+        android:divider="#090909"
+        android:layout_below="@+id/phonsetting"
+        android:background="@drawable/rowbackground">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume"
+                android:id="@+id/volumetext"
+                android:paddingTop="20dp"/>
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/volumeseekBar"
+                android:layout_below="@+id/volumetext"
+                android:paddingTop="10dp"/>
+
+
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/volume"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/brightness"
+        android:background="@drawable/rowbackground">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brightness"
+                android:paddingTop="20dp"
+                android:id="@+id/brightnesstext" />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/brightnessseekBar"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/brightnesstext"
+                />
+
+
+        </LinearLayout>
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/brightness"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/vibration"
+        android:background="@drawable/rowbackground">
+
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vibration"
+                android:paddingTop="20dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vibrationswitch"
+                android:paddingTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </TableRow>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="OK"
+        android:textSize="15sp"
+        android:id="@+id/back"
+        android:background="@drawable/shape"
+        android:textColor="@android:color/background_light"
+        android:onClick="GoBack"
+        android:layout_below="@+id/vibration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phonsetting"
+        android:text="Phone Settings"
+        android:textSize="35sp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+</ScrollView>
