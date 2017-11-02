@@ -1,15 +1,20 @@
 package com.example.jawwad.mobiledatabase;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.location.*;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,7 +23,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import mapareas.MapAreaManager;
@@ -37,7 +46,13 @@ public class Createnewlocation extends FragmentActivity implements OnMapReadyCal
     String radiusval = null;
     LocationManager locationManager;
     Location location;
-    LatLng myLoc;
+   public static LatLng myLoc;
+    Location mLastLocation;
+    Marker mCurrLocationMarker;
+    Circle mCircle;
+    double radiusInMeters = 100.0;
+    int strokeColor = 0xffff0000; //Color Code you want
+    int shadeColor = 0x44ff0000;
     GPSTracker gpsTracker;
 
     @Override
@@ -212,17 +227,75 @@ public class Createnewlocation extends FragmentActivity implements OnMapReadyCal
          myLoc = new LatLng(location.getLatitude(), location.getLongitude());
         else{
             myLoc = new LatLng(0.0,0.0);
+//            myLoc = new LatLng(gpsTracker.getLatitude(), gpsTracker.getLongitude());
+//            myLoc = new LatLng(CurrentConditionValues.location.latitude,CurrentConditionValues.location.longitude);
         }
 
         mMap.addMarker(new MarkerOptions().position(myLoc).title("MY CURRENT LOCATION"));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLoc, 13));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                //Location Permission already granted
+                mMap.setMyLocationEnabled(true);
+            } else {
+                //Request Location Permission
+                checkLocationPermission();
+            }
+        }
+        else {
             mMap.setMyLocationEnabled(true);
         }
-
     }
-    void getLocaion() {
 
+       /* if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        }*/
+
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    private void checkLocationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                new AlertDialog.Builder(this)
+                        .setTitle("Location Permission Needed")
+                        .setMessage("This app needs the Location permission, please accept to use location functionality")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //Prompt the user once explanation has been shown
+                                ActivityCompat.requestPermissions(Createnewlocation.this,
+                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                        MY_PERMISSIONS_REQUEST_LOCATION );
+                            }
+                        })
+                        .create()
+                        .show();
+
+
+            } else {
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_LOCATION );
+            }
+        }
+    }
+
+
+
+
+    void getLocaion() {
+/*
         locationManager = (LocationManager) this
                 .getSystemService(Context.LOCATION_SERVICE);
 
@@ -231,10 +304,13 @@ public class Createnewlocation extends FragmentActivity implements OnMapReadyCal
         String providerName = locationManager.getBestProvider(locationCritera,
                 true);
         if (providerName != null)
-            location = locationManager.getLastKnownLocation(providerName);
+            location = locationManager.getLastKnownLocation(providerName);*/
 
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000,
+        //To request location updates
+//        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1, 1, this);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 10000,
                 5, new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
@@ -243,7 +319,25 @@ public class Createnewlocation extends FragmentActivity implements OnMapReadyCal
                         mMap .addMarker(new MarkerOptions().position(new LatLng(location.getLatitude()
                                 ,location.getLongitude())));
 
+                        mLastLocation = location;
+                        if (mCurrLocationMarker != null) {
+                            mCurrLocationMarker.remove();
+                        }
 
+                        //Place current location marker
+                        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(latLng);
+                        markerOptions.title("Current Position");
+                        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+                        mCurrLocationMarker = mMap.addMarker(markerOptions);
+
+                        CircleOptions addCircle = new CircleOptions().center(latLng).radius(radiusInMeters).fillColor(shadeColor).strokeColor(strokeColor).strokeWidth(8);
+                        mCircle = mMap.addCircle(addCircle);
+
+                        //move map camera
+                        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
 
                     }
 

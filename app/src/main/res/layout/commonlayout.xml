@@ -12,6 +12,7 @@
 
     <CheckBox
         android:id="@+id/IsToRun"
+        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -37,7 +38,7 @@
             android:gravity="center_vertical"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 

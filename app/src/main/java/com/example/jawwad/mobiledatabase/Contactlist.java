@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
@@ -62,7 +62,8 @@ public class Contactlist extends AppCompatActivity {
                     Phone1 = " ";
                     Phone2 = " ";
                     Phone3 = " ";
-                    while (pCur.moveToNext()) {
+                    assert pCur != null;
+                    while ( pCur.moveToNext()) {
                         String phonetype = pCur
                                 .getString(pCur
                                         .getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE));

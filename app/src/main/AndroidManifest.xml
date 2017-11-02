@@ -99,6 +99,7 @@
         <activity android:name=".DetailActivity" />
         <activity android:name=".BlueTooth" />
         <activity android:name=".Charging" />
+        <activity android:name="com.codinguser.android.contactpicker.ContactsPickerActivity"/>
         <activity android:name=".GPS" />
         <activity android:name=".Automessaging" />
         <activity android:name=".Contactlist" />

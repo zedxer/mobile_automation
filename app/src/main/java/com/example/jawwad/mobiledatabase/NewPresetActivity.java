@@ -2,6 +2,8 @@ package com.example.jawwad.mobiledatabase;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +26,7 @@ public class NewPresetActivity  extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ConditonAdapter mAdapter;
     private EditText presetName;
+    private ConstraintLayout constraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class NewPresetActivity  extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.listView2);
         presetName = (EditText) findViewById(R.id.presetname);
+        constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
 
         mAdapter = new ConditonAdapter(this, conditionDetailsArrayList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -42,16 +46,18 @@ public class NewPresetActivity  extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
 
         prepareAdminData();
+
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
                 ConditionDetails conditionDetails = conditionDetailsArrayList.get(position);
 //                Toast.makeText(getApplicationContext(), adminDetails.getAdmin_name() + " is selected!", Toast.LENGTH_SHORT).show();
                 Intent f = null;
-                    if(conditionDetails.getName() == "Timer"){
+                    if(conditionDetails.getName().equals("Timer")){
 //                        ConditonAdapter.checkBox.setChecked(true);
-
+//                        mAdapter.checkBox.setChecked(true);
                         conditionDetails.setIschecked(true);
+//                        ConditonAdapter.checkBox.setChecked(conditionDetails.ischecked());
                         f = new Intent(NewPresetActivity.this, Timer.class);
                     }
                     else if (conditionDetails.getName() == "Battery") {
@@ -80,15 +86,21 @@ public class NewPresetActivity  extends AppCompatActivity {
 
             }
         }));
+         Snackbar snackbar = Snackbar
+                .make(constraintLayout, "Please Long press checkbox to check the Conditions", Snackbar.LENGTH_LONG);
+
+        snackbar.show();
 
     }
     public void  GoToNext(View v) {
 
-        if (presetName.getText().toString().matches("")) {
+        if (presetName.getText().toString().matches("")||!ConditonAdapter.checkChecked) {
 
-            Toast.makeText(this, "Please Enter Preset Name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter Preset Name and Select at-least one Condition to Proceed further ", Toast.LENGTH_SHORT).show();
 
-        } else {
+        }
+
+            else {
             File mytextfile = new File(File_Path.preset_path,"PresetName.txt"); //"/sdcard/com.automation/temp/"
             try {
 

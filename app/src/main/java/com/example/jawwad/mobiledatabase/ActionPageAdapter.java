@@ -24,7 +24,7 @@ public class ActionPageAdapter  extends ArrayAdapter<String>{
 
     private final Context context;
     private final String[] values;
-
+    static boolean checkChecked;
     public ActionPageAdapter(Context context, String[] values) {
         super(context, R.layout.commonlayout, values);
         this.context = context;
@@ -76,7 +76,7 @@ public class ActionPageAdapter  extends ArrayAdapter<String>{
         ch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-
+                        checkChecked = true;
                     File mytextfile = new File(File_Path.action_path, textView.getText().toString() + ".txt");
                     try {
 
@@ -92,6 +92,7 @@ public class ActionPageAdapter  extends ArrayAdapter<String>{
 
                 } else {
                     //"/sdcard/com.lacalprofile2/temp/temptask"
+                    checkChecked = false;
 
                //     String path = Environment.getExternalStorageDirectory().getPath() + "com.automation/temp/tempaction";
                     File mytextfile = new File(File_Path.action_path, textView.getText().toString() + ".txt");

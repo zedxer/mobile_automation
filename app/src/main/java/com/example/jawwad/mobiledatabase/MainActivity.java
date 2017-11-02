@@ -9,7 +9,6 @@ import android.os.Messenger;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -63,25 +62,22 @@ public class MainActivity extends AppCompatActivity implements Observer {
         i = new Intent(getApplicationContext(), MainService.class);
         status.setChecked(false);
 
-        status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        status.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
 
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-                if (isChecked) {
-
-                    MainService.con = true;
-                    i.putExtra("messenger", new Messenger(handler));
-                    startService(i);
-                    Toast.makeText(getApplicationContext(), "service started", Toast.LENGTH_SHORT).show();
-                } else {
+                MainService.con = true;
+                i.putExtra("messenger", new Messenger(handler));
+                startService(i);
+                Toast.makeText(getApplicationContext(), "service started", Toast.LENGTH_SHORT).show();
+            } else {
 
 
-                    MainService.con = false;
-                    stopService(i);
+                MainService.con = false;
+                stopService(i);
 
-                    Toast.makeText(getApplicationContext(), "service stoped", Toast.LENGTH_SHORT).show();
-                }
-            }});
+                Toast.makeText(getApplicationContext(), "service stoped", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
       private ArrayList<String> addpreset() {  // list of presets shows on main page
@@ -158,6 +154,8 @@ public class MainActivity extends AppCompatActivity implements Observer {
         super.onStop();
 
     }
+
+
 
 
 }

@@ -60,7 +60,13 @@ public class MainService extends IntentService {
     }
 
     public static void getCurrentLocation(Context c) {
-        CurrentConditionValues.location = new LatLng(MainActivity.gps.getLatitude(),MainActivity.gps.getLongitude());
+        LatLng newLatlng = new LatLng(0.0, 0.0);
+        if(Createnewlocation.myLoc == newLatlng){
+
+        }else
+
+//        CurrentConditionValues.location = new LatLng(MainActivity.gps.getLatitude(),MainActivity.gps.getLongitude());
+        CurrentConditionValues.location = Createnewlocation.myLoc;
 
     }
 

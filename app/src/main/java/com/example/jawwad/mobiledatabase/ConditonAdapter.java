@@ -25,6 +25,7 @@ public class ConditonAdapter extends RecyclerView.Adapter<ConditonAdapter.ViewHo
     private ArrayList<ConditionDetails> conditionDetailsArrayList;
     private Context context;
     static CheckBox checkBox;
+    static boolean checkChecked;
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvName;
         ImageView imgViewCon;
@@ -62,15 +63,16 @@ public class ConditonAdapter extends RecyclerView.Adapter<ConditonAdapter.ViewHo
 //        Glide.with(context).load(detail.getImage()).into(viewHolder.imgViewAdmin);
 
 
-        checkBox.setChecked(false);
+        checkBox.setChecked(detail.ischecked());
 
        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 // create directory
+
                 //  String path = Environment.getExternalStorageDirectory().getPath() + "/temp/tempcondition";
                 if (isChecked) {
 
-
+                        checkChecked = true;
                     File mytextfile = new File(File_Path.condition_path, viewHolder.tvName.getText().toString() + ".txt");
                     try {
 //"/sdcard/com.automation/temp/tempcondition"
@@ -86,6 +88,7 @@ public class ConditonAdapter extends RecyclerView.Adapter<ConditonAdapter.ViewHo
                     }
 
                 } else {
+                    checkChecked = false;
                     File mytextfile = new File(File_Path.condition_path, viewHolder.tvName.getText().toString() + ".txt");
 
                     if (mytextfile.exists()) {
