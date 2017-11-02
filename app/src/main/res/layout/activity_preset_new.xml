@@ -67,7 +67,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/shape"
-        android:onClick="GoToNext"
+        android:onClick="GoToMainPage"
         android:text="back"
         android:padding="8dp"
         android:textAllCaps="true"
