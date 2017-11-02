@@ -31,7 +31,7 @@ public class ListofAction extends AppCompatActivity {
 
 
     public void  GoToNext(View v)
-    { if(ActionPageAdapter.checkChecked == true) {
+    { if(ActionPageAdapter.checkChecked) {
         Intent go = new Intent(this, FinalPage.class);
         startActivity(go);
     }else Toast.makeText(this, "At-least check on condition to create preset", Toast.LENGTH_SHORT).show();
