@@ -3,22 +3,16 @@ package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.provider.Settings;
 
 import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import static android.R.attr.enabled;
 import static android.content.Context.LOCATION_SERVICE;
 
 
 /**
- * Created by Jawwad on 12/2/2016.
+ * Created by Naqi on 12/2/2016.
  */
 
 public class Gpsconcrete implements IAction {

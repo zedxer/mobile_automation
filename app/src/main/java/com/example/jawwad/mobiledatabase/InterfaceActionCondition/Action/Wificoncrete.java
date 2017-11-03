@@ -6,7 +6,7 @@ import android.net.wifi.WifiManager;
 import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 /**
- * Created by Jawwad on 11/7/2016.
+ * Created by Naqi on 11/7/2016.
  */
 
 public class Wificoncrete implements IAction{

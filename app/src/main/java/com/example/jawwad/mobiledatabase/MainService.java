@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * Created by Jawwad on 11/11/2016.
+ * Created by Naqi on 11/11/2016.
  */
 
 public class MainService extends IntentService {

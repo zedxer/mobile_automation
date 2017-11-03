@@ -11,8 +11,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/holo_blue_light"
-        android:textColor="@android:color/background_light"
+        android:background="@drawable/shape"
+        android:padding="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"        android:textColor="@android:color/background_light"
         android:onClick="GoBackLocattion"
         android:text="Back" />
 
@@ -23,7 +25,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="@android:color/holo_blue_light"
+        android:background="@drawable/shape"
+        android:padding="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:textColor="@android:color/background_light"
         android:onClick="GoBackok"
         android:text="OK" />

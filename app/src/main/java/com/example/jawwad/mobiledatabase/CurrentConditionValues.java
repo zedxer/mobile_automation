@@ -4,7 +4,7 @@ package com.example.jawwad.mobiledatabase;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
- * Created by Jawwad on 11/6/2016.
+ * Created by Naqi on 11/6/2016.
  */
 
 public final class CurrentConditionValues {

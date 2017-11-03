@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by Jawwad on 2/19/2017.
+ * Created by Naqi on 2/19/2017.
  */
 
 public class GPSTracker extends Service implements LocationListener {

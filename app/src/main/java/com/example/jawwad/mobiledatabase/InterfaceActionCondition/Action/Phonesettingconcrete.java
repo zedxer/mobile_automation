@@ -1,16 +1,12 @@
 package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
 
-import android.app.WallpaperManager;
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.media.AudioManager;
-import android.media.RingtoneManager;
-import android.net.Uri;
+
 import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
-import java.io.IOException;
 
 /**
- * Created by Jawwad on 12/12/2016.
+ * Created by Naqi on 12/12/2016.
  */
 
 public class Phonesettingconcrete implements IAction {

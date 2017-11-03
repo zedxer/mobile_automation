@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +21,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
- * Created by Jawwad on 11/11/2016.
+ * Created by Naqi on 11/11/2016.
  */
 
 public class MainPageAdapter extends ArrayAdapter<String>{

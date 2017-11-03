@@ -21,7 +21,7 @@
         android:id="@+id/ok"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_blue_light"
+android:background="@drawable/shape"
         android:textColor="@android:color/background_light"
         android:onClick="GoToBack"/>
 

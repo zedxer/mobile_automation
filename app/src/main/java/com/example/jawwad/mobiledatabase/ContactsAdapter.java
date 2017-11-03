@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jawwad on 12/11/2016.
+ * Created by Naqi on 12/11/2016.
  */
 
 public class ContactsAdapter  extends ArrayAdapter<String> {

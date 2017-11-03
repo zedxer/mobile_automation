@@ -1,7 +1,7 @@
 package com.example.jawwad.mobiledatabase;
 
 /**
- * Created by Jawwad on 2/5/2017.
+ * Created by Naqi on 2/5/2017.
  */
 
 public final class File_Path

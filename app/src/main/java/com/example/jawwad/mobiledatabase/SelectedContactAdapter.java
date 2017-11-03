@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 /**
- * Created by Jawwad on 12/11/2016.
+ * Created by Naqi on 12/11/2016.
  */
 
 public class SelectedContactAdapter extends ArrayAdapter<String> {

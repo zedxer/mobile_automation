@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/max1">
+    android:background="@drawable/lightblue"
+    >
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,8 +24,7 @@
         android:layout_alignParentLeft="true"
         android:id="@+id/volume"
         android:divider="#090909"
-        android:layout_below="@+id/phonsetting"
-        android:background="@drawable/rowbackground">
+        android:layout_below="@+id/phonsetting">
 
 
 
@@ -56,8 +56,7 @@
         android:layout_below="@+id/volume"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/brightness"
-        android:background="@drawable/rowbackground">
+        android:id="@+id/brightness">
 
 
 
@@ -91,8 +90,7 @@
         android:layout_below="@+id/brightness"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/vibration"
-        android:background="@drawable/rowbackground">
+        android:id="@+id/vibration">
 
 
 
@@ -104,13 +102,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vibration"
-                android:paddingTop="20dp" />
+                android:paddingTop="15dp" />
 
-            <Switch
+<Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/vibrationswitch"
-                android:paddingTop="20dp"
+                android:paddingTop="15dp"
+                android:theme="@style/AppTheme"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"/>
 

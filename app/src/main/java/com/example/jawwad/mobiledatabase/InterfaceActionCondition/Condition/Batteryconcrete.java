@@ -4,7 +4,7 @@ import com.example.jawwad.mobiledatabase.CurrentConditionValues;
 import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
 
 /**
- * Created by Jawwad on 11/23/2016.
+ * Created by Naqi on 11/23/2016.
  */
 
 public class Batteryconcrete implements ICondition {

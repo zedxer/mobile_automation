@@ -9,7 +9,7 @@ import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IPre
 import java.util.ArrayList;
 
 /**
- * Created by Jawwad on 11/11/2016.
+ * Created by Naqi on 11/11/2016.
  */
 
 class Presetconcrete implements IPreset , java.io.Serializable {

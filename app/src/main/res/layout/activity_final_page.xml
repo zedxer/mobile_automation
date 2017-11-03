@@ -13,16 +13,18 @@
     tools:context="com.example.jawwad.mobiledatabase.FinalPage">
 
     <Button
+        android:id="@+id/ok"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:text="OK"
-        android:textSize="15sp"
-        android:id="@+id/ok"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_blue_light"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/shape"
+        android:onClick="createpreset"
+        android:padding="8dp"
+        android:text="OK"
         android:textColor="@android:color/background_light"
-        android:onClick="createpreset" />
+        android:textSize="15sp" />
 
     <TextView
         android:text="Actions Are Selected"

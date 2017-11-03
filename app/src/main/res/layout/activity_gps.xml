@@ -15,6 +15,7 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
         android:layout_gravity="center|bottom"
         android:layout_centerInParent="true"
         android:layout_weight="0.52">
@@ -41,12 +42,12 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:text="OK"
+        android:background="@drawable/shape"
         android:textSize="15sp"
         android:layout_gravity="bottom|center"
         android:id="@+id/back"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:background="@android:color/holo_blue_light"
         android:textColor="@android:color/background_light"
         android:onClick="GoBack"/>
 

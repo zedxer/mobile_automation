@@ -14,7 +14,7 @@ import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAct
 import java.util.ArrayList;
 
 /**
- * Created by Jawwad on 12/4/2016.
+ * Created by Naqi on 12/4/2016.
  */
 
 public class Automessagingconcrete implements IAction{

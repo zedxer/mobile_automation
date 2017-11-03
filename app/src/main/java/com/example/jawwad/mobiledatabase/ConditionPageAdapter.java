@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created by Jawwad on 11/11/2016.
+ * Created by Naqi on 11/11/2016.
  */
 
 public class ConditionPageAdapter extends ArrayAdapter<String> {

@@ -4,7 +4,7 @@ import com.example.jawwad.mobiledatabase.CurrentConditionValues;
 import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
 
 /**
- * Created by Jawwad on 2/19/2017.
+ * Created by Naqi on 2/19/2017.
  */
 
 public class Locationconcrete implements ICondition {
