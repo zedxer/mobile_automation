@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.jawwad.mobiledatabase.model.ConditionDetails;
+import com.example.naqi.mobiledatabase.model.ConditionDetails;
 
 import java.io.File;
 import java.io.FileNotFoundException;

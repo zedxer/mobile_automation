@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase.model;
+package com.example.naqi.mobiledatabase.model;
 
 import android.graphics.drawable.Drawable;
 

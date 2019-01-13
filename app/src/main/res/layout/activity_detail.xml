@@ -16,7 +16,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:background="@drawable/lightblue"
 
-        tools:context="com.example.jawwad.mobiledatabase.DetailActivity">
+        tools:context="com.example.naqi.mobiledatabase.DetailActivity">
 
         <TextView
             android:id="@+id/detail"

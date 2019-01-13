@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 /**
  * Created by Naqi on 2/5/2017.

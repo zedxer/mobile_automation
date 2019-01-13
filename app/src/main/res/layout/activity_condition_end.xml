@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/lightblue"
 
-    tools:context="com.example.jawwad.mobiledatabase.ConditionEnd">
+    tools:context="com.example.naqi.mobiledatabase.ConditionEnd">
 
     <Button
         android:layout_width="wrap_content"

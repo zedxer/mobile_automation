@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/lightblue"
 
-    tools:context="com.example.jawwad.mobiledatabase.NewPreset">
+    tools:context="com.example.naqi.mobiledatabase.NewPreset">
 
     <EditText
         android:layout_width="match_parent"

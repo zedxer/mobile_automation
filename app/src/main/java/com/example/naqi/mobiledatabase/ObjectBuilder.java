@@ -1,19 +1,19 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action.Automessagingconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action.Bluetoothconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action.Gpsconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action.Phonesettingconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action.Wificoncrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Condition.Batteryconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Condition.Chargingconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Condition.Locationconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Condition.Timerconcrete;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Action.Automessagingconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Action.Bluetoothconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Action.Gpsconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Action.Phonesettingconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Action.Wificoncrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Condition.Batteryconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Condition.Chargingconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Condition.Locationconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Condition.Timerconcrete;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.BufferedReader;

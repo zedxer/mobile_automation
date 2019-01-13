@@ -12,7 +12,7 @@ import static mapareas.MapAreaWrapper.MarkerMoveResult.moved;
 import static mapareas.MapAreaWrapper.MarkerMoveResult.radiusChange;
 
 /**
- * Created by Jawwad on 2/19/2017.
+ * Created by naqi on 2/19/2017.
  */
 
 public class MapAreaManager implements GoogleMap.OnMarkerDragListener, GoogleMap.OnMapLongClickListener {

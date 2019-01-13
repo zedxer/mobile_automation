@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

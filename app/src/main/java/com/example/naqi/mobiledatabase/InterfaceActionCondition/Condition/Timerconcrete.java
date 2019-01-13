@@ -1,9 +1,9 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Condition;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Condition;
 
 import android.util.Log;
 
-import com.example.jawwad.mobiledatabase.CurrentConditionValues;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
+import com.example.naqi.mobiledatabase.CurrentConditionValues;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
 
 /**
  * Created by Naqi on 11/5/2016.

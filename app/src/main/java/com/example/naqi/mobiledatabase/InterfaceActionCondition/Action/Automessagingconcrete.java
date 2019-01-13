@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Action;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -9,7 +9,7 @@ import android.content.IntentFilter;
 import android.telephony.SmsManager;
 import android.widget.Toast;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.naqi.mobiledatabase.File_Path;
+import com.example.naqi.mobiledatabase.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;

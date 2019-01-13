@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Action;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.provider.Settings;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 import static android.content.Context.LOCATION_SERVICE;
 

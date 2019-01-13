@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/lightblue"
 
-    tools:context="com.example.jawwad.mobiledatabase.Battery">
+    tools:context="com.example.naqi.mobiledatabase.Battery">
 
     <android.support.v7.widget.AppCompatSeekBar
         android:id="@+id/battery"

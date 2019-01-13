@@ -1,9 +1,9 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Action;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 /**
  * Created by Naqi on 11/7/2016.

@@ -70,6 +70,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_above="@+id/radius"
-    tools:context="com.example.jawwad.mobiledatabase.Createnewlocation" />
+    tools:context="com.example.naqi.mobiledatabase.Createnewlocation" />
 
 </RelativeLayout>

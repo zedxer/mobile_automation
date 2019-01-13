@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;

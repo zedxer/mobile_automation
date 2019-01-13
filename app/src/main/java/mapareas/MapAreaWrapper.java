@@ -9,7 +9,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
- * Created by Jawwad on 2/19/2017.
+ * Created by naqi on 2/19/2017.
  */
 
 public class MapAreaWrapper

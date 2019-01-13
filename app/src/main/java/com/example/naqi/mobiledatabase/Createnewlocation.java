@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -34,7 +34,7 @@ import mapareas.MapAreaManager;
 import mapareas.MapAreaMeasure;
 import mapareas.MapAreaWrapper;
 
-import static com.example.jawwad.mobiledatabase.R.id.map;
+import static com.example.naqi.mobiledatabase.R.id.map;
 
 public class Createnewlocation extends FragmentActivity implements OnMapReadyCallback {
 

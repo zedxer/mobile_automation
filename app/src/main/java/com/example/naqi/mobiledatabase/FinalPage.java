@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Intent;
 import android.os.Build;
@@ -15,7 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static com.example.jawwad.mobiledatabase.UpdatePreset.deleteDirectory;
+import static com.example.naqi.mobiledatabase.UpdatePreset.deleteDirectory;
 
 public class FinalPage extends AppCompatActivity {
 

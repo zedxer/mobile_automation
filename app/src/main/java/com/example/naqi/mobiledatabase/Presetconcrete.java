@@ -1,10 +1,10 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Context;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IPreset;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IPreset;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,9 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Action;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 /**
  * Created by naqi on 11/28/2016.

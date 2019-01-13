@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/lightblue"
 
-    tools:context="com.example.jawwad.mobiledatabase.BlueTooth">
+    tools:context="com.example.naqi.mobiledatabase.BlueTooth">
 
 
     <RadioGroup

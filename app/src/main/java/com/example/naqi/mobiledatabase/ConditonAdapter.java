@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.jawwad.mobiledatabase.model.ConditionDetails;
+import com.example.naqi.mobiledatabase.model.ConditionDetails;
 
 
 import java.io.File;

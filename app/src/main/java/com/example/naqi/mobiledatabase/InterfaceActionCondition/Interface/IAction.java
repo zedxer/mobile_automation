@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface;
 
 import android.content.Context;
 

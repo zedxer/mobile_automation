@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/lightblue"
 
-    tools:context="com.example.jawwad.mobiledatabase.FinalPage">
+    tools:context="com.example.naqi.mobiledatabase.FinalPage">
 
     <Button
         android:id="@+id/ok"

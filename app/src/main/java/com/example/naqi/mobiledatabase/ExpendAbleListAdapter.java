@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.ICondition;
 
 import java.io.File;
 import java.io.IOException;

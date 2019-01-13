@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '28.0.2'
     defaultConfig {
-        applicationId "com.example.jawwad.mobiledatabase"
+        applicationId "com.example.naqi.mobiledatabase"
         minSdkVersion 19  //17
         targetSdkVersion 21
         versionCode 1

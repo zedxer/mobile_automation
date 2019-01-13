@@ -7,7 +7,7 @@
     android:id="@+id/constraintLayout"
     android:focusableInTouchMode="true"
     android:background="@drawable/lightblue"
-    tools:context="com.example.jawwad.mobiledatabase.NewPresetActivity">
+    tools:context="com.example.naqi.mobiledatabase.NewPresetActivity">
 
     <EditText
         android:id="@+id/presetname"

@@ -1,4 +1,4 @@
-package com.example.jawwad.mobiledatabase;
+package com.example.naqi.mobiledatabase;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static com.example.jawwad.mobiledatabase.File_Path.condition_path;
+import static com.example.naqi.mobiledatabase.File_Path.condition_path;
 
 public class Location extends AppCompatActivity {
 

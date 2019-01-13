@@ -1,9 +1,9 @@
-package com.example.jawwad.mobiledatabase.InterfaceActionCondition.Action;
+package com.example.naqi.mobiledatabase.InterfaceActionCondition.Action;
 
 import android.content.Context;
 import android.media.AudioManager;
 
-import com.example.jawwad.mobiledatabase.InterfaceActionCondition.Interface.IAction;
+import com.example.naqi.mobiledatabase.InterfaceActionCondition.Interface.IAction;
 
 /**
  * Created by Naqi on 12/12/2016.
